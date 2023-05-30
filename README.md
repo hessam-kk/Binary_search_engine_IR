@@ -106,7 +106,7 @@ Overall, this code creates a dictionary of unique words in a collection of docum
 
 ## Creating Posting List
 
-![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/e19c9f3d-51a9-4913-a8d1-856415147b0b)
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/8fe63cb8-2c96-4508-8674-957cad704fd9)
 
 This code creates a posting list for the tokens extracted in the previous code snippet. 
 ```
