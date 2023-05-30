@@ -237,3 +237,48 @@ If the searched word is not found in any document, the program prompts the user 
 ![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/7c64fd44-b7f6-4f60-a8aa-aff9944f1c91)
 
         
+# Running Code & Results
+
+In here, we work with the program and explore a few functionallity of it. 
+### Menu 
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/caa3cc23-fb8f-4526-a0d4-90482fadfc1e)
+
+At the first run, we can see this result. This run, cause the file Posting_list.dat to be generated.
+
+### Single word search
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/9df1895a-4c72-4aba-bee3-bb6408371d3b)
+
+If we search for a word, like level, we can see the result of the search.
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/9c682900-ee4d-48f3-9879-52c3ce206a0d)
+
+After entering a documner ID to show, this would show up all of the document on the screen.
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/946761ca-fdca-4880-85c3-3f39b471b5e6)
+
+We can keep going and ask for other documents at that moment as well.
+By typing \return, we navigate to the search menu.
+
+### Multiple word search
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/4511f9fc-1bba-4127-ae19-13f528f5d6ae)
+
+After searching the words level and begin, we can see the result as well.
+By typing the document ID, we can see the document.
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/12ce7da1-60dc-481d-ba0a-cbcd936acf5b)
+
+### Not found 
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/472e61f7-157c-492f-8f22-4319f6155070)
+
+If we search a word that doesn’t exists in our database, we would get an error.
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/d1f77153-b395-4b27-bc19-690b8fe5bb65)
+
+# Note
+The document has been accomplished 
+with the help of ChatGPT and MidJourney
+
