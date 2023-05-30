@@ -214,3 +214,15 @@ if '+' in word:
 If the user searches for multiple words, the program generates a list of documents that contain all of the searched words. The program outputs the first 50 documents that contain all of the searched words and prompts the user to select a document ID to open. If the user inputs "\all", the program outputs all of the document IDs that contain all of the searched words.
 
 
+## handle single word
+```
+elif posing_list.get(word):
+            print(border)
+            print('The word {} has {} occurance in all documents, here are the top documents:'.format(word, len(posing_list[word])))
+            print(posing_list[word][:min(len(posing_list[word]), 50)])
+            
+            show_doc(word)
+            print(border)
+```
+If the user searches for a single word, the program outputs the number of occurrences of the word in all documents and the first 50 documents that contain the word. The program then prompts the user to select a document ID to open.
+
