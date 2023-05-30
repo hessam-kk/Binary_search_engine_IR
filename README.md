@@ -22,12 +22,32 @@ structures for efficient search operations.
 First, I set the file names that I want to load into my program. Please note
 that because files were really huge, to test the program I just use the content
 of only one file, as well others are commented.
-
-![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/9ca6103f-8e56-459d-b8c3-4f0e82a4a25e)
-
+```
+## Reading Files
+data = {}
+file_names = ('lyrl2004_tokens_train.dat',
+              #   'lyrl2004_tokens_test_pt2.dat',
+              #   'lyrl2004_tokens_test_pt3.dat',
+              )
+```
 After that, I we reach here:
+```
+for file_name in file_names:
+    with open(file_name, 'r') as f:
+        x = f.readlines()
 
-![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/3267c04c-038f-418b-9c30-6874687af187)
+    ID = ''
+    for line in x:
+        if '.I' in line:
+            ID = line.replace('.I ', '').strip()
+            data[ID] = ''
+            print((ID + '\n') * (int(ID) % 100_000 == 0), end='')
+        elif line == '.W\n':
+            continue
+
+        else:
+            data[ID] += line + ' '
+```
 
 This code reads multiple text files and extracts relevant information from them to build a data dictionary. Here's a step-by-step breakdown of what each part of the code does:
 
@@ -53,7 +73,21 @@ Overall, this code reads multiple files and extracts the document IDs and text c
 
 This code creates a dictionary of unique words (or tokens) found in a collection of documents. 
 
-![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/4022efab-f4e2-4459-937e-1c157ad30c96)
+```
+## Create Dictionary/Vocabulary
+vocab_list = {}
+
+for key, val in data.items():
+    vocab_list[key] = set(val.split())
+    
+
+print('A total of {} documents has been tokenized...!\n'.format(
+    len(vocab_list)))
+from itertools import chain
+tokens = *chain(*vocab_list.values()),
+print('A total of {} tokens has been extracted...!\n'.format
+      (len(tokens)))
+```
 
 Here's a step-by-step breakdown of what each part of the code does:
 
