@@ -39,8 +39,6 @@ tokens = *chain(*vocab_list.values()),
 print('A total of {} tokens has been extracted...!\n'.format
       (len(tokens)))
 
-
-
 ## Creating Posting List
 print('Creating Posting List')
 posing_list = {}
@@ -52,3 +50,9 @@ for token in tokens[:100]:
 
 print('Finished Creating Posting List.')
 
+## Write Posing List to the file
+with open('Posting_list.dat', 'w') as f:
+    for token, post_list in posing_list.items():
+        f.write(token + ': ' + '->'.join(post_list) + '\n\n')
+
+        
