@@ -186,3 +186,31 @@ if __name__ == '__main__':
 ```
 This code is the main part of a search engine that allows users to search for words in a set of documents. Here is an explanation of the code:
 This code allows users to search for words in a set of documents. The program first prompts the user to input a word to search for. The user can also search for multiple words by using the + sign to join the words. If the user inputs the "\exit" command, the program terminates.
+
+## handle multiple word search
+```
+if '+' in word:
+            words = [x.strip() for x in word.split('+')]
+            bundle = [[posing_list.get(x)] for x in words]
+            try:
+                intersec_list = bundle.pop()
+                # merge all lists
+                while bundle:
+                    intersec_list = intersection(intersec_list, bundle.pop())
+                    # flatten the list
+                    while len(intersec_list) == 1:
+                        intersec_list = intersec_list[0]
+                        
+            except:
+                pass
+            
+            # # flatten the list
+            while len(intersec_list) == 1:
+                        intersec_list = intersec_list[0]
+                
+            print(intersec_list[:min(len(intersec_list), 50)])
+            show_doc(0)
+```
+If the user searches for multiple words, the program generates a list of documents that contain all of the searched words. The program outputs the first 50 documents that contain all of the searched words and prompts the user to select a document ID to open. If the user inputs "\all", the program outputs all of the document IDs that contain all of the searched words.
+
+
