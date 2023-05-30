@@ -140,3 +140,10 @@ if __name__ == '__main__':
             show_doc(word)
             print(border)
             
+                
+        # Not found 
+        else:
+            print('No such a word found in our database. \
+                Try searching other words! ')
+            
+        
