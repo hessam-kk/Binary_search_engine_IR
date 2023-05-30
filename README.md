@@ -69,7 +69,7 @@ Overall, this code reads multiple files and extracts the document IDs and text c
 
 ## Create Dictionary/Vocabulary
 
-![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/72ca5897-7d7b-4de6-85a3-8d9c87c0d2eb)
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/5a9a9362-0315-426f-8237-934d8f4657dc)
 
 This code creates a dictionary of unique words (or tokens) found in a collection of documents. 
 
