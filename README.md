@@ -116,3 +116,49 @@ with open('Posting_list.dat', 'w') as f:
 
 This code writes all the result into a file called Posting_list in a format of linkedlist. 
 
+# Interactive Search Engine
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/3a227d4f-2e4e-449d-b5c7-3b0bf205ceab)
+
+Here, we defined a few functions to work with.
+
+```
+       
+def intersection(lst1, lst2):
+    return set(lst1) & set(lst2)
+
+def show_doc(word):
+    print('Enter the document ID to open it.\
+        enter \\all to show all the documents number. \
+                Enter "\\return" to return to main menu')
+    doc_id = input('>> ')
+    if doc_id == '\all':
+        if word == 0:
+            print(intersec_list)
+        else:
+            print(posing_list[word])
+            
+    print('Enter the document ID to open it.\
+        enter \\all to show all the documents number. \
+                Enter "\\return" to return to main menu')
+    doc_id = input('>> ')
+
+    while doc_id != '\\return':
+        if data.get(doc_id):
+            print(border)
+            print(border)
+            print(data[doc_id])
+            print(border)
+            print(border)
+            print('Enter another document ID to open it.\
+            Enter "\\return" to return to main menu')
+            doc_id = input('>> ')
+            
+        else:
+            print('You may entered a wrong document Id. Try again.\
+                Enter the document ID to open it. \
+                Enter "\\return" to return to main menu')
+            doc_id = input('>> ')
+ 
+ 
+```
