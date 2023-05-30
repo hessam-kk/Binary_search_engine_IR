@@ -169,3 +169,20 @@ The second function show_doc(word) is used to display the contents of a document
 ![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/c3509c88-43e3-4436-8527-4ac787e9d558)
 
 
+# Main Part
+
+```
+border = '=' * 150
+if __name__ == '__main__':
+    while True:
+        print(border)
+        print('Type a word to search in documents. \
+            Search multiple words by using the + sign. \
+            Type "\exit" to finish the program')
+        word = input('>> ')
+        
+        if word == '\exit':
+            break
+```
+This code is the main part of a search engine that allows users to search for words in a set of documents. Here is an explanation of the code:
+This code allows users to search for words in a set of documents. The program first prompts the user to input a word to search for. The user can also search for multiple words by using the + sign to join the words. If the user inputs the "\exit" command, the program terminates.
