@@ -102,3 +102,17 @@ Overall, this code creates a posting list for a subset of tokens extracted from 
 
 ![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/74a4718b-ae2a-4d08-9cac-f09da96c1b71)
 
+## Writing to file
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/c249acee-f4c0-409a-99d3-7b7add86977f)
+
+This is not an important part to describe separately, but Midjourney works amazing… :))))
+```
+## Write Posing List to the file
+with open('Posting_list.dat', 'w') as f:
+    for token, post_list in posing_list.items():
+        f.write(token + ': ' + '->'.join(post_list) + '\n\n')
+```
+
+This code writes all the result into a file called Posting_list in a format of linkedlist. 
+
