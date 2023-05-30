@@ -93,3 +93,40 @@ def show_doc(word):
                 Enter "\\return" to return to main menu')
             doc_id = input('>> ')
  
+
+
+border = '=' * 150
+if __name__ == '__main__':
+    while True:
+        print(border)
+        print('Type a word to search in documents. \
+            Search multiple words by using the + sign. \
+            Type "\exit" to finish the program')
+        word = input('>> ')
+        
+        if word == '\exit':
+            break
+
+        # handle multiple word search
+        if '+' in word:
+            words = [x.strip() for x in word.split('+')]
+            bundle = [[posing_list.get(x)] for x in words]
+            try:
+                intersec_list = bundle.pop()
+                # merge all lists
+                while bundle:
+                    intersec_list = intersection(intersec_list, bundle.pop())
+                    # flatten the list
+                    while len(intersec_list) == 1:
+                        intersec_list = intersec_list[0]
+                        
+            except:
+                pass
+            
+            # # flatten the list
+            while len(intersec_list) == 1:
+                        intersec_list = intersec_list[0]
+                
+            print(intersec_list[:min(len(intersec_list), 50)])
+            show_doc(0)
+            
