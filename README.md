@@ -226,3 +226,14 @@ elif posing_list.get(word):
 ```
 If the user searches for a single word, the program outputs the number of occurrences of the word in all documents and the first 50 documents that contain the word. The program then prompts the user to select a document ID to open.
 
+
+## Handle Not found
+```
+else:
+            print('No such a word found in our database. \
+                Try searching other words! ')
+```
+If the searched word is not found in any document, the program prompts the user to search for other words.
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/7c64fd44-b7f6-4f60-a8aa-aff9944f1c91)
+
+        
