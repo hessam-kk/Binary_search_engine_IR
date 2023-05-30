@@ -38,3 +38,17 @@ from itertools import chain
 tokens = *chain(*vocab_list.values()),
 print('A total of {} tokens has been extracted...!\n'.format
       (len(tokens)))
+
+
+
+## Creating Posting List
+print('Creating Posting List')
+posing_list = {}
+for token in tokens[:100]:
+    posing_list[token] = []
+    for doc_id, doc_txt in vocab_list.items():
+        if token in doc_txt:
+            posing_list[token].append(doc_id) 
+
+print('Finished Creating Posting List.')
+
