@@ -23,3 +23,18 @@ for file_name in file_names:
         # input()
 
 print('A total of {} documents has been loaded...!\n'.format(len(data)))
+
+
+## Create Dictionary/Vocabulary
+vocab_list = {}
+
+for key, val in data.items():
+    vocab_list[key] = set(val.split())
+    
+
+print('A total of {} documents has been tokenized...!\n'.format(
+    len(vocab_list)))
+from itertools import chain
+tokens = *chain(*vocab_list.values()),
+print('A total of {} tokens has been extracted...!\n'.format
+      (len(tokens)))
