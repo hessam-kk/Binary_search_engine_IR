@@ -126,7 +126,12 @@ Here, we defined a few functions to work with.
        
 def intersection(lst1, lst2):
     return set(lst1) & set(lst2)
+```
 
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/482a759b-7112-41b1-9b26-71c8660a2a45)
+
+
+```
 def show_doc(word):
     print('Enter the document ID to open it.\
         enter \\all to show all the documents number. \
@@ -162,3 +167,9 @@ def show_doc(word):
  
  
 ```
+The second function show_doc(word) is used to display the contents of a document. It takes a word as input to handle batch file show. This function prompts the user to enter a document ID. In the main program, to make it consice, we only show the first 50 results to the user, so If the user enters '\all', it prints out a list of all document IDs containing the input word (if word != 0, we comprehend that the user query is containing only one word, then it prints out the documents containing the input word; if word == 0, we understand that we have to deal with intersection_list, thus it prints out the documents number in the intersect_list). If the user enters a valid document ID, it prints out the contents of that document. The function then prompts the user to enter another document ID or '\return' to return to the main menu. If the user enters an invalid document ID, it prompts the user to try again.
+
+![Uploading image.png…]()
+
+
+
