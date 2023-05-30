@@ -70,3 +70,35 @@ Overall, this code creates a dictionary of unique words in a collection of docum
 
 ![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/58ab8223-fa01-4f92-97cc-320a80d542d8)
 
+## Creating Posting List
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/e19c9f3d-51a9-4913-a8d1-856415147b0b)
+
+This code creates a posting list for the tokens extracted in the previous code snippet. 
+```
+## Creating Posting List
+print('Creating Posting List')
+posing_list = {}
+for token in tokens[:100]:
+    posing_list[token] = []
+    for doc_id, doc_txt in vocab_list.items():
+        if token in doc_txt:
+            posing_list[token].append(doc_id) 
+
+print('Finished Creating Posting List.')
+
+```
+Here's a step-by-step breakdown of what each part of the code does:
+
+•	The posing_list variable is initialized as an empty dictionary. This dictionary will store the posting list for each token (i.e., the documents that contain the token).
+
+•	The for loop iterates over the first 1000 tokens in the tokens iterable (created in the previous code snippet). For each token, the code initializes an empty list as the value for the token in the posing_list dictionary. The number 1000 is selected for test as the larger numbers will take much more time to compute.
+
+•	The next for loop iterates over each item in the vocab_list dictionary. For each document, the code checks if the current token is in the document's set of words (i.e., if the token appears in the document). If it does, the code appends the document ID to the list of documents associated with the current token in the posing_list dictionary.
+
+•	After processing all the documents for the current token, the code moves on to the next token and repeats the process until 1000 tokens have been processed.
+
+Overall, this code creates a posting list for a subset of tokens extracted from a collection of documents. The posting list indicates which documents contain each token and can be used for text search and analysis purposes. Note that this code only processes a subset of the tokens (the first 1000), so the full posting list for all tokens would require changing this number.
+
+![image](https://github.com/hessam-kk/Binary_search_engine_IR/assets/24957423/74a4718b-ae2a-4d08-9cac-f09da96c1b71)
+
