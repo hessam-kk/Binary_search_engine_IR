@@ -129,4 +129,14 @@ if __name__ == '__main__':
                 
             print(intersec_list[:min(len(intersec_list), 50)])
             show_doc(0)
+               
+              
+        # handle single word
+        elif posing_list.get(word):
+            print(border)
+            print('The word {} has {} occurance in all documents, here are the top documents:'.format(word, len(posing_list[word])))
+            print(posing_list[word][:min(len(posing_list[word]), 50)])
+            
+            show_doc(word)
+            print(border)
             
