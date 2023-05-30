@@ -55,4 +55,41 @@ with open('Posting_list.dat', 'w') as f:
     for token, post_list in posing_list.items():
         f.write(token + ': ' + '->'.join(post_list) + '\n\n')
 
-        
+
+  
+def intersection(lst1, lst2):
+    return set(lst1) & set(lst2)
+
+def show_doc(word):
+    print('Enter the document ID to open it.\
+        enter \\all to show all the documents number. \
+                Enter "\\return" to return to main menu')
+    doc_id = input('>> ')
+    if doc_id == '\all':
+        if word == 0:
+            print(intersec_list)
+        else:
+            print(posing_list[word])
+            
+    print('Enter the document ID to open it.\
+        enter \\all to show all the documents number. \
+                Enter "\\return" to return to main menu')
+    doc_id = input('>> ')
+
+    while doc_id != '\\return':
+        if data.get(doc_id):
+            print(border)
+            print(border)
+            print(data[doc_id])
+            print(border)
+            print(border)
+            print('Enter another document ID to open it.\
+            Enter "\\return" to return to main menu')
+            doc_id = input('>> ')
+            
+        else:
+            print('You may entered a wrong document Id. Try again.\
+                Enter the document ID to open it. \
+                Enter "\\return" to return to main menu')
+            doc_id = input('>> ')
+ 
